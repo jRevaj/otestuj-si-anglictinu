@@ -5,21 +5,23 @@ import { DropTarget } from 'react-drag-drop-container';
 
 export default class Fillable extends React.Component {
     static propTypes = {
-        word: PropTypes.string.isRequired,
+        wordText: PropTypes.string.isRequired,
         currentLevel: PropTypes.number.isRequired
     }
 
     constructor(props) {
         super(props)
         this.state = {
-            word: "",
-            currentLevel: this.props.currentLevel
+            wordText: "",
+            currentLevel: this.props.currentLevel,
+            filled: false
         }
     }
 
     handleHit = (e) => {
         this.setState({
-            word: e.dragData
+            wordText: e.dragData,
+            filled: true
         })
 
         e.containerElem.visibility = 'hidden'
@@ -27,24 +29,26 @@ export default class Fillable extends React.Component {
 
     removeWord = () => {
         this.setState({
-            word: ""
+            wordText: "",
+            filled: false
         })
     }
 
     componentWillReceiveProps(nextLevel) {
         if (nextLevel.currentLevel !== this.state.currentLevel) {
             this.setState({
-                word: "",
-                currentLevel: nextLevel.currentLevel
+                wordText: "",
+                currentLevel: nextLevel.currentLevel,
+                filled: false
             })
         }
     }
 
     render() {
         return (
-            <div onClick={this.removeWord}>
-                <DropTarget targetKey="word" onHit={this.handleHit} dropData={this.state.word}>
-                    {this.state.word}
+            <div data-testid="answer" data-filled={this.state.filled} onClick={this.removeWord}>
+                <DropTarget targetKey="word" onHit={this.handleHit} dropData={this.state.wordText}>
+                    {this.state.wordText}
                 </DropTarget>
             </div>
            

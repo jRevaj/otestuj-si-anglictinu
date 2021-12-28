@@ -4,7 +4,7 @@ import Fillable from "./Fillable";
 
 export default class Sentence extends React.Component {
     static propTypes = {
-        marked: PropTypes.bool.isRequired,
+        /* marked: PropTypes.bool.isRequired, */ 
         sentence: PropTypes.array.isRequired,
         currentLevel: PropTypes.number.isRequired
     }
@@ -17,12 +17,12 @@ export default class Sentence extends React.Component {
                 )
             }
             return (
-                <Fillable word={word.text} currentLevel={this.props.currentLevel}/>
+                <Fillable key={idx} wordText={word.text} currentLevel={this.props.currentLevel}/>
             )
         })
         return(
             <div className="block">
-                <div className="word-wrapper">
+                <div className="word-wrapper sentence">
                     {sentence} 
                 </div>
             </div>

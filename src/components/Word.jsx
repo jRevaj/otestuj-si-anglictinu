@@ -9,8 +9,8 @@ export default class Word extends React.Component {
     }
 
     render() {
-        const words = this.props.words.map(word => (
-            <DragDropContainer targetKey="word" dragData={word}>
+        const words = this.props.words.map((word, idx) => (
+            <DragDropContainer key={idx} targetKey="word" dragData={word}>
                 {word}
             </DragDropContainer>
         ))

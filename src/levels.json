@@ -2,23 +2,53 @@
     "levels": [
         {
             "id": 1,
-            "sentence": "The <brown> fox <jumped> over the <dog>.",
+            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
             "hint": "hint 1"
         },
         {
             "id": 2,
-            "sentence": "Random <sentence> generated <by> Juraj <Revaj>.",
+            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
             "hint": "hint 2"
         },
         {
             "id": 3,
-            "sentence": "Another <random> sentence to <test> my <app>.",
+            "sentence": ["Another <random> sentence to <test> my <app>."],
             "hint": "hint 3"
         },
         {
             "id": 4,
-            "sentence": "Last <level> in <testing> this piece of <shit>.",
+            "sentence": ["Last <level> in <testing> this piece of <shit>."],
             "hint": "hint 4"
+        },
+        {
+            "id": 5,
+            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
+            "hint": "hint 1"
+        },
+        {
+            "id": 6,
+            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
+            "hint": "hint 2"
+        },
+        {
+            "id": 7,
+            "sentence": ["Another <random> sentence to <test> my <app>."],
+            "hint": "hint 3"
+        },
+        {
+            "id": 8,
+            "sentence": ["Last <level> in <testing> this piece of <shit>."],
+            "hint": "hint 4"
+        },
+        {
+            "id": 9,
+            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
+            "hint": "hint 1"
+        },
+        {
+            "id": 10,
+            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
+            "hint": "hint 2"
         }
     ]
 }
