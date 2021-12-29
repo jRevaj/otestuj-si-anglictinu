@@ -10,10 +10,11 @@
     "react-dom": "^17.0.2",
     "react-drag-drop-container": "^6.1.1",
     "react-scripts": "5.0.0",
-    "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "compile:sass": "node-sass src/sass/main.scss src/style/style.css -w",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
   }
 }
