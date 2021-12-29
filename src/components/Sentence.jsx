@@ -13,7 +13,7 @@ export default class Sentence extends React.Component {
         const sentence = this.props.sentence.map((word, idx) => {
             if (word.type === 'word') {
                 return (
-                    <div data-testid={'word'} key={idx}>{word.text}</div>
+                    <div className="word" data-testid={'word'} key={idx}>{word.text}</div>
                 )
             }
             return (
@@ -21,10 +21,8 @@ export default class Sentence extends React.Component {
             )
         })
         return(
-            <div className="block">
-                <div className="word-wrapper sentence">
-                    {sentence} 
-                </div>
+            <div className="word-wrapper sentence">
+                {sentence} 
             </div>
         )
     }

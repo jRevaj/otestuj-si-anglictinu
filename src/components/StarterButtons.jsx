@@ -18,8 +18,8 @@ export default class StarterButtons extends React.Component {
     render() {
         return (
             <div className="starter-btns">
-                <button onClick={this.handleStart}>Spustiť hru</button>
-                <button onClick={this.handleTutorial}>Ako na to?</button>
+                <button className="btn" onClick={this.handleStart}>Spustiť hru</button>
+                <button className="btn" onClick={this.handleTutorial}>Ako na to?</button>
             </div>
         )
     }

@@ -46,7 +46,7 @@ export default class Fillable extends React.Component {
 
     render() {
         return (
-            <div data-testid="answer" data-filled={this.state.filled} onClick={this.removeWord}>
+            <div className="fillable" data-testid="answer" data-filled={this.state.filled} onClick={this.removeWord}>
                 <DropTarget targetKey="word" onHit={this.handleHit} dropData={this.state.wordText}>
                     {this.state.wordText}
                 </DropTarget>

@@ -94,7 +94,7 @@ export default class Game extends React.Component {
                 if (answers[i][j].word === "") {
                     renderElements.push(`${j + 1}. slovo v ${i + 1}. vete nebolo vyplnené.`)
                 } else if (answers[i][j].word !== this.state.words[i][j]) {
-                    renderElements.push(`${answers[i][j].word} nie je správne. Správna odpoveď je ${this.state.words[i][j]}`)
+                    renderElements.push(`${answers[i][j].word} nie je správne.`)
                 } else {
                     renderElements.push(`${answers[i][j].word} je správne.`)
                 }
@@ -112,31 +112,56 @@ export default class Game extends React.Component {
         })
     }
 
+    shuffleWords(wordsArr) {
+        let i = wordsArr.length - 1;
+        for (; i > 0; i--) {
+            for (let j = 0; j < wordsArr[i].length; j++) {
+                const insideRand = Math.floor(Math.random() * (i + 1));
+                const temp = wordsArr[i][j];
+                wordsArr[i][j] = wordsArr[i][insideRand];
+                wordsArr[i][insideRand] = temp;
+            }
+            const rand = Math.floor(Math.random() * (i + 1));
+            const temp = wordsArr[i];
+            wordsArr[i] = wordsArr[rand];
+            wordsArr[rand] = temp;
+        }
+        return wordsArr;
+    }
+
     render() {
         const { showResults, showHint, finished, sentence, words } = this.state
 
         return(
             <section className="game">
-                <div className="row">
+                <div className="row btns-row">
                     {finished ? <h2>You won!</h2> : <h2>Level {this.state.currentLevel}</h2>}
-                    <button onClick={this.handleNext}>Next level</button>
+                    <button className="btn" onClick={this.handleNext}>Next level</button>
                     {this.state.currentLevel !== 1 
-                        ? <button onClick={this.handleRestart} style={{display: "block"}}>New game</button>
-                        : <button onClick={this.handleRestart} style={{display: "none"}}>New game</button>}  
+                        ? <button className="btn" onClick={this.handleRestart} style={{display: "block"}}>New game</button>
+                        : <button className="btn" onClick={this.handleRestart} style={{display: "none"}}>New game</button>}  
                 </div>
-                <div className="row">
+                <div className="sentence-row">
+                    <h4>Vyplňte chýbajúce slová:</h4>
                     {sentence.map((item, idx) => {
                         return <Sentence sentence={item} key={idx} currentLevel={this.state.currentLevel} />
                     })}
                 </div>
-                <div className="row">
-                    {words.map((item, idx) => {
+                <div className="words-row">
+                    <h4>Slová ktoré môžete použiť:</h4>
+                    <div className="row">
+                        {words.map((item, idx) => {
                         return <Word words={item} key={idx} />
-                    })}    
+                    })}
+                    </div>
                 </div>
-                <div className="row">
-                    <button onClick={this.showResults}>Test</button>
-                    <button onClick={() => {this.setState({showHint: true})}}>I need hint!</button>
+                <div className="row btns-row">
+                    <div className="col">
+                        <button className="btn" onClick={this.showResults}>Ohodnotiť</button>
+                    </div>
+                    <div className="col">
+                         <button className="btn" onClick={() => {this.setState({showHint: true})}}>Potrebujem poradiť!</button>
+                    </div>
                 </div>
                 {showHint 
                     ? <div id="hint" className="hint" style={{display: "block"}}>{this.state.hint}</div> 

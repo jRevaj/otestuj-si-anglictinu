@@ -1,0 +1,24 @@
+.sentence {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    color: $color-white;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.sentence::after {
+    content: '.';
+    font-size: $default-font-size;
+}
+
+.word {
+    margin: 0 .5rem;
+    font-size: $default-font-size;
+}
+
+.fillable {
+    min-width: 2rem;
+    font-size: $default-font-size;
+}

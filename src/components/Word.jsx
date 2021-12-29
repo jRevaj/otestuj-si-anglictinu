@@ -15,12 +15,6 @@ export default class Word extends React.Component {
             </DragDropContainer>
         ))
 
-        return(
-            <div className="block">
-                <div className="word-wrapper">
-                    {words}
-                </div>
-            </div>
-        )
+        return[words]
     }
 }

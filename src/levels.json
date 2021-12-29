@@ -2,7 +2,18 @@
     "levels": [
         {
             "id": 1,
-            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
+            "sentence": [
+                "In the end he <gave> <in> and allowed the chairman to prepare the document.", 
+                "I <insist> <on> paying for this meal. You paid for the last one.", 
+                "The Prime Minister <pointed> <out> that it was a historic day for the country.", 
+                "My boyfriend always <talks> me <into> smoking a cigarette with him, but I don't want to.",
+                "I'm sorry I <messed> <up> the meeting. But it wasn't all my fault.", 
+                "It took the teacher a few minutes to get the class <settled> <down>.", 
+                "I <turned> <to> him for help after the incident had happened.", 
+                "They worked for a few hours on the problem but simple weren't able to <figure> <out> what had happened.",
+                "He always <reminds> me <of> a person I met at high school many years ago.",
+                "The doctor told me to <calm> <down> and not get hysterical. It was only a minor injury I had."
+            ],
             "hint": "hint 1"
         },
         {

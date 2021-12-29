@@ -1,0 +1,34 @@
+.btn, .btn:link, .btn:visited {
+    cursor: pointer;
+    font-size: $buttons-font-size;
+    font-weight: 200;
+    border: thin solid $color-mantis;
+    border-radius: 0;
+    background: transparent;
+    color: $color-black-chocolate;
+    outline: none;
+    padding: .5rem 2rem;
+    position: relative;
+    transition: .3s;
+}
+
+.btn::after {
+    content: "";
+    background-color: $color-salmon;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: .7rem;
+    left: .7rem;
+    transition: .3s;
+}
+
+.btn:hover {
+    border: thin solid $color-salmon;
+}
+
+.btn:hover::after {
+    top: 0px;
+    left: 0px;
+}

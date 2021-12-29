@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    padding: 0 0;
+    margin: 4rem;
+    box-sizing: border-box;
+    background-color: $color-black-chocolate;
+    font-size: $default-font-size;
+}
