@@ -3,6 +3,38 @@
         {
             "id": 1,
             "sentence": [
+                "You should get that tooth <extracted>.", 
+                "We found the house <deserted>.", 
+                "We saw him <crossing> the bridge.", 
+                "We heard them <laugh>.",
+                "The teacher made the boy <learn> his lesson.", 
+                "We saw him <go> out.", 
+                "We <hoped> you would succeed.", 
+                "He <admitted> <that> he had written the letter.",
+                "The boys suggested <going> to the park.",
+                "I <suppose> he is not at home."
+            ],
+            "hint": "hint 1"
+        },
+        {
+            "id": 2,
+            "sentence": [
+                "She started ranting about his pet projects, but everybody <went> out of the room.", 
+                "He began to play sitar when he <was> six.", 
+                "I wondered who <had> <taken> the money.", 
+                "My legs were stiff because I <had> <been> standing still for a long time.",
+                "I looked out of the window and saw Susie <driving> down the street.", 
+                "In the last few months, competition has become <much> <tougher>.", 
+                "I don’t know <whether> she will come.", 
+                "This is the girl <who> won the first prize.",
+                "The stairs are wet and slippery. Walk <carefully>.",
+                "We eat that we <may> live."
+            ],
+            "hint": "hint 2"
+        },
+        {
+            "id": 3,
+            "sentence": [
                 "In the end he <gave> <in> and allowed the chairman to prepare the document.", 
                 "I <insist> <on> paying for this meal. You paid for the last one.", 
                 "The Prime Minister <pointed> <out> that it was a historic day for the country.", 
@@ -14,51 +46,118 @@
                 "He always <reminds> me <of> a person I met at high school many years ago.",
                 "The doctor told me to <calm> <down> and not get hysterical. It was only a minor injury I had."
             ],
-            "hint": "hint 1"
-        },
-        {
-            "id": 2,
-            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
-            "hint": "hint 2"
-        },
-        {
-            "id": 3,
-            "sentence": ["Another <random> sentence to <test> my <app>."],
             "hint": "hint 3"
         },
         {
             "id": 4,
-            "sentence": ["Last <level> in <testing> this piece of <shit>."],
+            "sentence": [
+                "I have always <been> <able> <to> play games well.", 
+                "He has always been <allowed> to do what he wanted.", 
+                "One cannot help but <admire> his courage.", 
+                "<How> <much> do you want a holiday?",
+                "I will have tea <instead> <of> coffee.", 
+                "They often go fishing instead of <going> <to> school.", 
+                "Stella often goes to the movies <without> telling her parents.", 
+                "I am interested to <find> <out> what she did with that money.",
+                "Only then <did> <I> understand what he meant.",
+                "I tried <calling> the doctor but my hands were numb."
+            ],
             "hint": "hint 4"
         },
         {
             "id": 5,
-            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
+            "sentence": [
+                "<Hamlet> was written <by> Shakespeare.", 
+                "Can you <translate> this from English <into> French?", 
+                "The <temperature> was <below> zero.", 
+                "There <were> a lot of people <at> our party.",
+                "There is a spider <in> the <corner> of my room.", 
+                "This <flight> goes to Washington DC <via> Charlotte.", 
+                "Where do you come <from>?", 
+                "I haven't seen you <for> ages.",
+                "She had problems <with> reading the <instructions>.",
+                "The police car chased the robbers <through> the streets."
+            ],
             "hint": "hint 1"
         },
         {
             "id": 6,
-            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
+            "sentence": [
+                "I don't know where my book is. I have to <look> <for> it.", 
+                "It's dark inside. Can you <switch> <on> the light, please?", 
+                "<Fill> <in> the form, please.", 
+                "It's warm inside. <Take> <off> your coat.",
+                "This pencil is really old. You can <throw> it <away>.", 
+                "It's so loud here. Can you <turn> <down> the radio a little?", 
+                "The firemen were able to <put> <out> the fire in Church Street.", 
+                "Does your little brother <believe> <in> ghosts?",
+                "We <mixed> the numbers <up>.",
+                "Dennis <looked> <after> his brother."
+            ],
             "hint": "hint 2"
         },
         {
             "id": 7,
-            "sentence": ["Another <random> sentence to <test> my <app>."],
+            "sentence": [
+                "<The> <plane> left at eight o'clock.", 
+                "Peter's <daughters> work at a large bank.", 
+                "There was <a> <boy> in the room.", 
+                "He <has> <been> very busy lately.",
+                "Jim and Mary <lived> in a nice <house> with a large yard.", 
+                "John is a car <mechanic>, and Mike repairs <refrigerators>.", 
+                "He will speak <to> <the> <manager>.", 
+                "She was wearing a <light> summer <dress> and open-toe sandals.",
+                "I saw something <interesting> in the kitchen. <Is> <it> for me?",
+                "I'll ask them <after> <dinner>."
+            ],
             "hint": "hint 3"
         },
         {
             "id": 8,
-            "sentence": ["Last <level> in <testing> this piece of <shit>."],
+            "sentence": [
+                "She looked at him <doubtfully> but didn't say anything.", 
+                "She looked <doubtful> but didn't say anything.", 
+                "He strongly <doubted> that they would be able to find the thief.", 
+                "It was without <doubt> the most important of his achievements.",
+                "I will <simplify> the task for beginning students.", 
+                "It is a <simple> question. Why don't you just answer it?", 
+                "The <simplicity> of the solution to their problem was amazing.", 
+                "To his great <disappointment> , she declined his invitation.",
+                "Would you <prefer> to stay here or to go to the garden?",
+                "The first spelling test was <surprisingly> easy."
+            ],
             "hint": "hint 4"
         },
         {
             "id": 9,
-            "sentence": ["The <brown> fox <jumped> over the <dog>.", "Random <sentence> generated <by> Juraj <Revaj>."],
+            "sentence": [
+                "If I <were> you, I would call him.", 
+                "She would write to him if she <knew> his address. Do you know his address?", 
+                "What would happen if someone <pressed> this button accidentally?", 
+                "What would you do if you <had> a million dollars?",
+                "If I had a bicycle, I <could> <go> for a ride with you tomorrow.", 
+                "I hope she <wouldn't> mind if I stayed here.", 
+                "<Should> Mrs. Green call, tell her I'll be back around four o'clock.", 
+                "She would be disappointed if we <didn't> <bring> her a present.",
+                "<Had> I known his true intentions, I would not have allowed him to stay in my house.",
+                "I demand that he <apologize> immediately."
+            ],
             "hint": "hint 1"
         },
         {
             "id": 10,
-            "sentence": ["Random <sentence> generated <by> Juraj <Revaj>."],
+            "sentence": [
+                "What would you do if your car <broke> <down> in the middle of the road?", 
+                "It is imperative that he <arrive> before one o'clock.", 
+                "I wish you <had> <told> me about it yesterday, before I sent out the invitations.", 
+                "I wish you <wouldn't> play the music so loudly. I have a headache.",
+                "She looked ill. I insisted that she <should> <see> a doctor.", 
+                "My car is old. If I <had> enough money, I would buy a new car.", 
+                "I wish I <hadn't> <said> that. My words offended and upset her.", 
+                "We'd like to stay longer, but it's already late. It's time we <went> home.",
+                "<May> I speak to Mr. Smith, please?",
+                "I demand that he <apologize> immediately."
+            ],
             "hint": "hint 2"
         }
     ]

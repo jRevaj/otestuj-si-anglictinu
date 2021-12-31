@@ -1,8 +1,8 @@
 .sentence {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     color: $color-white;
     margin-left: 2rem;
     margin-top: 1rem;

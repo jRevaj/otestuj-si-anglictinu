@@ -1,12 +1,10 @@
 import React from "react";
 import levels from "../levels.json"
+import { cloneDeep, isUndefined } from "lodash";
 
 import { getSentence, getWords } from "./TextConverter";
 import Sentence from "./Sentence";
 import Word from "./Word";
-import { render } from "@testing-library/react";
-
-
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -112,15 +110,10 @@ export default class Game extends React.Component {
         })
     }
 
+
+
     shuffleWords(wordsArr) {
-        let i = wordsArr.length - 1;
-        for (; i > 0; i--) {
-            for (let j = 0; j < wordsArr[i].length; j++) {
-                const insideRand = Math.floor(Math.random() * (i + 1));
-                const temp = wordsArr[i][j];
-                wordsArr[i][j] = wordsArr[i][insideRand];
-                wordsArr[i][insideRand] = temp;
-            }
+        for (let i = 0; i < wordsArr.length; i++) {
             const rand = Math.floor(Math.random() * (i + 1));
             const temp = wordsArr[i];
             wordsArr[i] = wordsArr[rand];
@@ -131,6 +124,8 @@ export default class Game extends React.Component {
 
     render() {
         const { showResults, showHint, finished, sentence, words } = this.state
+        let shuffledWords = cloneDeep(words)
+        shuffledWords = this.shuffleWords(shuffledWords)
 
         return(
             <section className="game">
@@ -150,8 +145,8 @@ export default class Game extends React.Component {
                 <div className="words-row">
                     <h4>Slová ktoré môžete použiť:</h4>
                     <div className="row">
-                        {words.map((item, idx) => {
-                        return <Word words={item} key={idx} />
+                        {shuffledWords.map((item, idx) => {
+                        return !isUndefined(item) && <Word words={item} key={idx} />
                     })}
                     </div>
                 </div>

@@ -3,8 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
 
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .row {
@@ -19,9 +20,9 @@
 .sentence-row {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     align-content: center;
     margin-bottom: 6rem;
 }
@@ -31,8 +32,8 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: start;
-    align-content: start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .words-row > .row {
