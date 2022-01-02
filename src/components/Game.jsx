@@ -12,12 +12,12 @@ export default class Game extends React.Component {
         super(props)
         this.handleBackToHomescreen.bind(this)
         this.state = {
-            currentLevel: 1,
+            currentLevel: localStorage.getItem('currentLevel') !== null ? ~~localStorage.getItem('currentLevel') : localStorage.setItem('currentLevel', 1),
             levels: levels.levels,
             totalLevels: levels.levels.length,
-            sentence: this.loadSentences(levels.levels[0].sentence),
-            words: this.loadWords(levels.levels[0].sentence),
-            hint: levels.levels[0].hint,
+            sentence: this.loadSentences(levels.levels[localStorage.getItem('currentLevel') - 1].sentence),
+            words: this.loadWords(levels.levels[localStorage.getItem('currentLevel') - 1].sentence),
+            hint: levels.levels[localStorage.getItem('currentLevel') - 1].hint,
             finished: false,
             showResults: false,
             showHint: false,
@@ -25,12 +25,18 @@ export default class Game extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.setState({
+            currentLevel: localStorage.getItem('currentLevel') ? ~~localStorage.getItem('currentLevel') : localStorage.setItem('currentLevel', this.state.currentLevel)
+        })
+    }
+
     handleNext = () => {
         if (this.state.currentLevel === this.state.totalLevels) {
             this.setState({ finished: true })
         } else {
             this.setState({
-                currentLevel: this.state.currentLevel < this.state.totalLevels ? this.state.currentLevel + 1 : this.state.currentLevel,
+                currentLevel: (this.state.currentLevel < this.state.totalLevels) ? (this.state.currentLevel + 1) : (this.state.currentLevel),
                 sentence: this.loadSentences(levels.levels[this.state.currentLevel].sentence),
                 words: this.loadWords(levels.levels[this.state.currentLevel].sentence),
                 hint: levels.levels[this.state.currentLevel].hint,
@@ -38,7 +44,13 @@ export default class Game extends React.Component {
                 showResults: false,
                 showHint: false
             })
-        } 
+        }
+    }
+
+    updateStorage() {
+        let level = this.state.currentLevel
+
+        localStorage.setItem('currentLevel', level)
     }
 
     handleRestart = () => {
@@ -55,6 +67,8 @@ export default class Game extends React.Component {
 
     handleBackToHomescreen = () => {
         this.props.backToHomescreen()
+
+        localStorage.setItem('currentLevel', 1)
     }
 
     loadSentences(sentenceArr) {
@@ -137,6 +151,7 @@ export default class Game extends React.Component {
         let shuffledWords = cloneDeep(words)
         let solution = cloneDeep(sentence)
         shuffledWords = this.shuffleWords(shuffledWords)
+        this.updateStorage()
 
         return(
             <section className="game">
