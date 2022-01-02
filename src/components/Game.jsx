@@ -193,7 +193,7 @@ export default class Game extends React.Component {
                                         <button className="btn" onClick={this.showResults}>Ohodnotiť</button>
                                     </div>
                                     <div className="col">
-                                        <a href="#hint" className="btn" onClick={() => {
+                                        <a href="#tutorial" className="btn" onClick={() => {
                                             let body = document.body
                                             if (this.state.showHint === false) {
                                                 this.setState({ showHint: true })
@@ -203,7 +203,7 @@ export default class Game extends React.Component {
                                     </div>
                                 </div>
 
-                                <div id="hint" className="popup" style={{ display: "block" }}>
+                                <div id="tutorial" className="popup" style={{ display: "block" }}>
                                     <div className="popup__content">
                                         <h3>Ako na to?</h3>
                                         <a href="#game" className="popup__close" onClick={() => {

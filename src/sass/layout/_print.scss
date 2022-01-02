@@ -1,0 +1,66 @@
+@media print {
+    body * {
+      visibility: hidden !important;
+      width: 100%;
+      background-color: white !important;
+    }
+
+    .container {
+        width: auto !important;
+        display: block !important;
+        padding: 0 0 !important;
+        margin: 0 0 !important;
+        min-height: 0 !important;
+    }
+
+    .heading-row {
+        display: none !important;
+    }
+
+    .row {
+        margin: 0 0 !important;
+    }
+
+    .starter-btns {
+        display: none !important;
+    }
+
+    .btns-row {
+        display: none;
+    }
+
+    .sentence-row {
+        display: none;
+    }
+
+    .words-row {
+        display: none;
+    }
+
+    .bottom-btns-row {
+        display: none;
+    }
+
+    #tutorial, #tutorial * {
+        opacity: 1;
+        visibility: visible !important;
+        color: black !important;
+        box-shadow: none;
+        font-size: 1.6rem !important;
+    }
+
+    #tutorial {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .popup__content {
+        background-color: transparent !important;
+        color: black !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+    
+}
