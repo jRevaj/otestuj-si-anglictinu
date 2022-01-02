@@ -1,34 +1,57 @@
 .btn, .btn:link, .btn:visited {
     cursor: pointer;
+    font-family: "Poppins", sans-serif;
     font-size: $buttons-font-size;
-    font-weight: 200;
+    font-weight: 400;
+    text-decoration: none;
     border: thin solid $color-mantis;
     border-radius: 0;
     background: transparent;
     color: $color-black-chocolate;
     outline: none;
-    padding: .5rem 2rem;
+    padding: .8rem 2rem;
     position: relative;
     transition: .3s;
+
+    @include respond(tab-port) {
+        font-size: 2.2rem;
+    }
+
+    &::after {
+        content: "";
+        background-color: $color-salmon;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: .8rem;
+        left: .8rem;
+        transition: .3s;
+    }
+
+    &:hover {
+        border: thin solid $color-salmon;
+    }
+
+    &:hover::after {
+        top: 0px;
+        left: 0px;
+    }
 }
 
-.btn::after {
-    content: "";
-    background-color: $color-salmon;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: .7rem;
-    left: .7rem;
-    transition: .3s;
+.btn-inverted, .btn-inverted:link, .btn-inverted:visited {
+    border: thin solid $color-black-chocolate;
+    color: $color-salmon;
+
+    &::after {
+        background-color: $color-black-chocolate;
+    }
+
+    &:hover {
+        border: thin solid $color-black-chocolate;
+    }
 }
 
-.btn:hover {
-    border: thin solid $color-salmon;
-}
-
-.btn:hover::after {
-    top: 0px;
-    left: 0px;
+.btn-ma-top {
+    margin-top: 4rem;
 }

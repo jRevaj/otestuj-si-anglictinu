@@ -6,11 +6,16 @@
     color: $color-white;
     margin-left: 2rem;
     margin-top: 1rem;
-}
 
-.sentence::after {
-    content: '.';
-    font-size: $default-font-size;
+    @include respond(tab-port) {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    &::after {
+        content: '.';
+        font-size: $default-font-size;
+    }
 }
 
 .word {

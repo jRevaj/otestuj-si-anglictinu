@@ -15,6 +15,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .sentence-row {
@@ -34,17 +35,52 @@
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-}
 
-.words-row > .row {
-    margin: 0 0;
+    & > .row {
+        margin: 0 0;
+    }
 }
 
 .btns-row {
     justify-content: space-evenly;
+
+    @include respond(tab-port) {
+        margin: 2rem 0;
+        justify-content: space-between;
+    }
+}
+
+.bottom-btns-row {
+    justify-content: space-evenly;
+    margin: 4rem 0;
 }
 
 .results {
     margin-top: 4rem;
     text-align: center;
+}
+
+.final-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 0;
+
+    @include respond(tab-port) {
+        margin: 0 0 4rem 0;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: row;
+    
+    @include respond(tab-port) {
+        &:last-child {
+            margin-top: 4rem;
+        }
+    }
 }

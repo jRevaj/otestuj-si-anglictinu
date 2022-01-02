@@ -5,7 +5,7 @@ import "./style/style.css";
 function App() {
     return (
         <main className="container">
-            <div className="row">
+            <div className="row heading-row">
                 <h1>Otestuj si angličtinu!</h1>
             </div>
             <div className="row">

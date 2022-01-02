@@ -4,8 +4,8 @@
     text-align: center;
     transition: all .2s;
     color: $color-white;
-}
 
-.ddcontainer:not(:first-child) {
-    margin: .5rem .5rem;
+    &:not(:first-child) {
+        margin: .5rem .5rem;
+    }
 }
