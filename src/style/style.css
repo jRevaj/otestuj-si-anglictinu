@@ -261,7 +261,7 @@ p {
 .col {
   display: flex;
   flex-direction: row; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 37.5em) {
     .col:last-child {
       margin-top: 4rem; } }
 
