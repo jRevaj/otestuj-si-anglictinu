@@ -7,9 +7,12 @@ export default class Homescreen extends React.Component {
         super(props)
         this.startGame.bind(this)
         this.backToHomescreen.bind(this)
+
+        const storedState = localStorage.getItem('inGame') ? JSON.parse(localStorage.getItem('inGame')) : false
+
         this.state = {
-            inGame: localStorage.getItem('inGame') !== null ? JSON.parse(localStorage.getItem('inGame')) : JSON.stringify(localStorage.setItem('inGame', false)),
-        };
+            inGame: storedState
+        }
     }
 
     startGame = () => {
@@ -21,7 +24,7 @@ export default class Homescreen extends React.Component {
     }
 
     updateStorage(val) { 
-        localStorage.setItem('inGame', val)
+        localStorage.setItem('inGame', JSON.stringify(val))
     }
 
     render() {

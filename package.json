@@ -2,6 +2,7 @@
   "name": "zaverecne-zadanie",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://webte1.fei.stuba.sk/~xrevaj/final_16515645/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -11,7 +12,19 @@
     "react-dom": "^17.0.2",
     "react-drag-drop-container": "^6.1.1",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "workbox-background-sync": "^6.4.2",
+    "workbox-broadcast-update": "^6.4.2",
+    "workbox-cacheable-response": "^6.4.2",
+    "workbox-core": "^6.4.2",
+    "workbox-expiration": "^6.4.2",
+    "workbox-google-analytics": "^6.4.2",
+    "workbox-navigation-preload": "^6.4.2",
+    "workbox-precaching": "^6.4.2",
+    "workbox-range-requests": "^6.4.2",
+    "workbox-routing": "^6.4.2",
+    "workbox-strategies": "^6.4.2",
+    "workbox-streams": "^6.4.2"
   },
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss src/style/style.css -w",
