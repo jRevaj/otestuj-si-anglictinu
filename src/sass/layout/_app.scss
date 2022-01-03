@@ -77,7 +77,7 @@
 .col {
     display: flex;
     flex-direction: row;
-    
+
     @include respond(tab-port) {
         &:last-child {
             margin-top: 4rem;

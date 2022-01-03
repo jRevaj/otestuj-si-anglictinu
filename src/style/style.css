@@ -27,7 +27,9 @@ body {
 .overflowhidden {
   overflow: hidden !important; }
 
-.btn, .btn:link, .btn:visited {
+.btn,
+.btn:link,
+.btn:visited {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-size: 2.6rem;
@@ -38,34 +40,48 @@ body {
   background: transparent;
   color: #131200;
   outline: none;
-  padding: .8rem 2rem;
+  padding: 0.8rem 2rem;
   position: relative;
-  transition: .3s; }
+  transition: 0.3s; }
   @media (max-width: 56.25em) {
-    .btn, .btn:link, .btn:visited {
+    .btn,
+    .btn:link,
+    .btn:visited {
       font-size: 2.2rem; } }
-  .btn::after, .btn:link::after, .btn:visited::after {
+  .btn::after,
+  .btn:link::after,
+  .btn:visited::after {
     content: "";
-    background-color: #E9806E;
+    background-color: #e9806e;
     width: 100%;
     z-index: -1;
     position: absolute;
     height: 100%;
-    top: .8rem;
-    left: .8rem;
-    transition: .3s; }
-  .btn:hover, .btn:link:hover, .btn:visited:hover {
-    border: thin solid #E9806E; }
-  .btn:hover::after, .btn:link:hover::after, .btn:visited:hover::after {
+    top: 0.8rem;
+    left: 0.8rem;
+    transition: 0.3s; }
+  .btn:hover,
+  .btn:link:hover,
+  .btn:visited:hover {
+    border: thin solid #e9806e; }
+  .btn:hover::after,
+  .btn:link:hover::after,
+  .btn:visited:hover::after {
     top: 0px;
     left: 0px; }
 
-.btn-inverted, .btn-inverted:link, .btn-inverted:visited {
+.btn-inverted,
+.btn-inverted:link,
+.btn-inverted:visited {
   border: thin solid #131200;
-  color: #E9806E; }
-  .btn-inverted::after, .btn-inverted:link::after, .btn-inverted:visited::after {
+  color: #e9806e; }
+  .btn-inverted::after,
+  .btn-inverted:link::after,
+  .btn-inverted:visited::after {
     background-color: #131200; }
-  .btn-inverted:hover, .btn-inverted:link:hover, .btn-inverted:visited:hover {
+  .btn-inverted:hover,
+  .btn-inverted:link:hover,
+  .btn-inverted:visited:hover {
     border: thin solid #131200; }
 
 .btn-ma-top {
@@ -82,7 +98,7 @@ h1 {
 
 h4 {
   font-size: 2.6rem;
-  color: #C59B76;
+  color: #c59b76;
   font-weight: 400; }
 
 p {
@@ -103,22 +119,22 @@ p {
   color: #000; }
 
 .fillable {
-  margin: 0 .5rem; }
+  margin: 0 0.5rem; }
 
 .droptarget {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #C0C781 100%, rgba(0, 0, 0, 0) 100%) right bottom no-repeat;
+  background: linear-gradient(to right, #c0c781 100%, rgba(0, 0, 0, 0) 100%) right bottom no-repeat;
   background-size: 100% 1px;
   min-width: 4rem;
   font-size: 1.6rem;
   text-align: center;
-  transition: all .2s; }
+  transition: all 0.2s; }
 
 .highlighted {
   width: 100%;
-  background: linear-gradient(to right, #E9806E 100%, rgba(0, 0, 0, 0) 100%) right bottom no-repeat;
+  background: linear-gradient(to right, #e9806e 100%, rgba(0, 0, 0, 0) 100%) right bottom no-repeat;
   background-size: 100% 3px; }
 
 .game {
@@ -137,11 +153,11 @@ p {
       margin-top: 2rem;
       margin-left: 0; } }
   .sentence::after {
-    content: '.';
+    content: ".";
     font-size: 1.6rem; }
 
 .word {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   font-size: 1.6rem; }
 
 .fillable {
@@ -174,10 +190,10 @@ p {
   display: inline-block;
   font-size: 1.6rem;
   text-align: center;
-  transition: all .2s;
+  transition: all 0.2s;
   color: #fff; }
   .ddcontainer:not(:first-child) {
-    margin: .5rem .5rem; }
+    margin: 0.5rem 0.5rem; }
 
 .container {
   display: flex;
@@ -259,7 +275,7 @@ p {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s; }
+  transition: all 0.3s; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -273,7 +289,7 @@ p {
     overflow-x: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
-    transition: all .5s .2s;
+    transition: all 0.5s 0.2s;
     padding: 4rem; }
     @media (max-width: 56.25em) {
       .popup__content {
@@ -293,9 +309,9 @@ p {
     text-decoration: none;
     display: inline-block;
     line-height: 1;
-    transition: all .3s; }
+    transition: all 0.3s; }
   .popup__close:hover {
-    color: #E9806E; }
+    color: #e9806e; }
   .popup__row {
     margin: 2rem 0; }
 
@@ -324,7 +340,8 @@ p {
     display: none; }
   .bottom-btns-row {
     display: none; }
-  #tutorial, #tutorial * {
+  #tutorial,
+  #tutorial * {
     opacity: 1;
     visibility: visible !important;
     color: black !important;

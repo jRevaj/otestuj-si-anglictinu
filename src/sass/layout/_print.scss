@@ -1,8 +1,8 @@
 @media print {
     body * {
-      visibility: hidden !important;
-      width: 100%;
-      background-color: white !important;
+        visibility: hidden !important;
+        width: 100%;
+        background-color: white !important;
     }
 
     .container {
@@ -41,7 +41,8 @@
         display: none;
     }
 
-    #tutorial, #tutorial * {
+    #tutorial,
+    #tutorial * {
         opacity: 1;
         visibility: visible !important;
         color: black !important;
@@ -62,5 +63,4 @@
         left: 0 !important;
         transform: none !important;
     }
-    
 }
