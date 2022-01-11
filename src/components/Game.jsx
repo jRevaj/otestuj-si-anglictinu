@@ -16,7 +16,7 @@ export default class Game extends React.Component {
             ? parseInt(localStorage.getItem("currentLevel"))
             : 1;
 
-        if (storedLevel === 0 || storedLevel > levels.levels.length) {
+        if (storedLevel <= 0 || storedLevel > levels.levels.length) {
             storedLevel = 1
         }
 
