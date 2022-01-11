@@ -16,8 +16,8 @@ export default class Game extends React.Component {
             ? parseInt(localStorage.getItem("currentLevel"))
             : 1;
 
-        if (storedLevel === 0) {
-            storedLevel += 1
+        if (storedLevel === 0 || storedLevel > levels.levels.length) {
+            storedLevel = 1
         }
 
         this.state = {
@@ -176,7 +176,7 @@ export default class Game extends React.Component {
             <section className="game">
                 {finished ? (
                     <div className="row final-row">
-                        <h4>Gratulujeme, prešli ste všetky levely!</h4>
+                        <h4>Gratulujem, prešli ste všetky levely!</h4>
                         <button
                             className="btn btn-ma-top"
                             onClick={this.handleBackToHomescreen}
