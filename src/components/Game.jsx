@@ -12,9 +12,13 @@ export default class Game extends React.Component {
         super(props);
         this.handleBackToHomescreen.bind(this);
 
-        const storedLevel = localStorage.getItem("currentLevel")
+        let storedLevel = localStorage.getItem("currentLevel")
             ? parseInt(localStorage.getItem("currentLevel"))
             : 1;
+
+        if (storedLevel === 0) {
+            storedLevel += 1
+        }
 
         this.state = {
             currentLevel: storedLevel,
